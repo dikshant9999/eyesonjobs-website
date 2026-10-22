@@ -14,6 +14,6 @@ A WordPress theme and companion plugin for eyesonjobs.com: jobs, candidate and e
 
 Open the link below to try the site in your browser. It runs a temporary private copy of WordPress for each visitor, so nothing you do affects anyone else. Emails are not sent in the preview and Razorpay is not connected.
 
-PREVIEW_LINK_PLACEHOLDER
+**[Open the live preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/dikshant9999/eyesonjobs-website/main/blueprint.json)**
 
 Admin login is automatic in the preview.

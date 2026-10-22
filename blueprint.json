@@ -1,0 +1,32 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/",
+  "preferredVersions": { "php": "8.3", "wp": "latest" },
+  "login": true,
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "git:directory",
+        "url": "https://github.com/dikshant9999/eyesonjobs-website",
+        "ref": "main",
+        "path": "eyesonjobs-core"
+      },
+      "options": { "activate": true }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "git:directory",
+        "url": "https://github.com/dikshant9999/eyesonjobs-website",
+        "ref": "main",
+        "path": "eyesonjobs"
+      },
+      "options": { "activate": true }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; update_option('permalink_structure','/%postname%/'); update_option('blogname','Eyes on Jobs'); update_option('blogdescription','Recruitment partner, Pan India'); eoj_run_setup(true,true); $rows=[['Senior Sales Manager','Acme Retail','Gurugram','Sales','Full Time','5-8 years','₹9-12 LPA'],['PHP Developer','Techno Soft','Noida','IT & Software','Full Time','2-4 years','₹6-9 LPA'],['Accounts Executive','Finance Hub','Delhi','Finance & Accounts','Full Time','1-2 years','₹3-4 LPA']]; foreach($rows as $r){ $id=wp_insert_post(['post_type'=>'eoj_job','post_status'=>'publish','post_title'=>$r[0],'post_content'=>'<p>Sample job for the preview at '.$r[1].'.</p>']); update_post_meta($id,'_eoj_company',$r[1]); update_post_meta($id,'_eoj_experience',$r[5]); update_post_meta($id,'_eoj_salary',$r[6]); wp_set_object_terms($id,$r[2],'eoj_job_location'); wp_set_object_terms($id,$r[3],'eoj_job_category'); wp_set_object_terms($id,$r[4],'eoj_job_type'); } flush_rewrite_rules();"
+    }
+  ]
+}
