@@ -1,0 +1,88 @@
+/* Eyes on Jobs Core: minimal fallback styles.
+   Loaded only when the Eyes on Jobs theme is not active; the theme styles these classes itself. */
+.eoj-form { display: grid; gap: 16px; max-width: 640px; }
+.eoj-form fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 16px; }
+.eoj-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.eoj-field { display: grid; gap: 6px; }
+.eoj-field > label, .eoj-field > span { font-weight: 600; color: #0b1f4d; }
+.eoj-field .req { color: #ff5a4e; }
+.eoj-field small { color: #64748b; }
+.eoj-form input[type="text"], .eoj-form input[type="email"], .eoj-form input[type="tel"], .eoj-form input[type="url"],
+.eoj-form input[type="number"], .eoj-form input[type="password"], .eoj-form input[type="file"], .eoj-form select, .eoj-form textarea {
+	width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; box-sizing: border-box; background: #fff;
+}
+.eoj-field.has-error input, .eoj-field.has-error select, .eoj-field.has-error textarea { border-color: #ff5a4e; }
+.eoj-check { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; color: #475569; }
+.eoj-hp { position: absolute !important; left: -9999px !important; height: 0; overflow: hidden; }
+.eoj-btn { display: inline-block; padding: 12px 22px; border: 0; border-radius: 999px; background: #f97316; color: #fff; font: 700 15px/1.2 inherit; cursor: pointer; text-decoration: none; text-align: center; }
+.eoj-btn--block { width: 100%; }
+.eoj-btn:disabled { opacity: 0.6; cursor: wait; }
+.eoj-alert { padding: 14px 16px; border-radius: 10px; font-weight: 600; }
+.eoj-alert--success { background: #dcfce7; color: #14532d; }
+.eoj-alert--error { background: #fee2e2; color: #7f1d1d; }
+.eoj-alert--info { background: #eaf0fb; color: #0b1f4d; }
+.eoj-note { border-left: 4px solid #f97316; background: #fff7f0; padding: 12px 16px; color: #7c2d12; font-size: 14px; }
+.eoj-recaptcha-note { font-size: 12px; color: #64748b; }
+.grecaptcha-badge { visibility: hidden; }
+.eoj-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; background: #f4f7fd; border-radius: 10px; padding: 4px; margin-bottom: 20px; }
+.eoj-tabs button { border: 0; background: transparent; padding: 10px; border-radius: 8px; font: 700 15px inherit; color: #64748b; cursor: pointer; }
+.eoj-tabs button[aria-selected="true"] { background: #fff; color: #0b1f4d; }
+.eoj-tabpanel[hidden] { display: none; }
+.eoj-roles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.eoj-roles label { display: flex; gap: 8px; align-items: center; border: 1px solid #cbd5e1; border-radius: 10px; padding: 12px; cursor: pointer; font-weight: 600; }
+.eoj-account { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 24px; align-items: start; }
+.eoj-account__nav { background: #0b1f4d; color: #fff; border-radius: 14px; padding: 24px; }
+.eoj-account__nav h3, .eoj-account__nav p { color: #fff; margin: 0; }
+.eoj-account__avatar { width: 56px; height: 56px; border-radius: 50%; background: #f97316; display: grid; place-items: center; font-weight: 800; font-size: 1.4rem; margin-bottom: 10px; }
+.eoj-account__nav ul { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 4px; }
+.eoj-account__nav a { color: #fff; text-decoration: none; display: block; padding: 8px 10px; border-radius: 8px; }
+.eoj-account__nav a:hover { background: rgba(255, 255, 255, 0.12); }
+.eoj-account__main { display: grid; gap: 20px; }
+.eoj-card { border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; background: #fff; }
+.eoj-table { width: 100%; border-collapse: collapse; }
+.eoj-table th, .eoj-table td { text-align: left; padding: 10px; border-bottom: 1px solid #e2e8f0; }
+.eoj-status { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 12px; font-weight: 700; background: #eaf0fb; color: #1e3a8a; }
+.eoj-status--paid { background: #dcfce7; color: #166534; }
+.eoj-status--pending { background: #fef3c7; color: #92400e; }
+.eoj-paybox { text-align: center; max-width: 520px; }
+.eoj-price__amount { display: flex; justify-content: center; align-items: baseline; gap: 12px; margin: 0; }
+.eoj-price__amount del { color: #64748b; }
+.eoj-price__amount strong { font-size: 2.4rem; color: #0b1f4d; }
+.eoj-price__tax, .eoj-price__secure { color: #64748b; font-size: 14px; }
+.eoj-summary { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 8px; text-align: left; }
+.eoj-summary li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px; }
+.eoj-summary li span { color: #64748b; }
+.eoj-paymethods { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.eoj-paymethods li { font-size: 12px; font-weight: 700; background: #f4f7fd; border-radius: 6px; padding: 5px 10px; }
+@media (max-width: 720px) {
+	.eoj-row, .eoj-roles, .eoj-account { grid-template-columns: 1fr; }
+}
+
+.eoj-paybox { text-align: left; }
+.eoj-confirm { margin-top: 18px; padding-top: 18px; border-top: 1px dashed #e2e8f0; }
+
+/* Payment method picker and expiring QR */
+.eoj-paybox__title { text-align: center; margin: 26px 0 14px; font-size: 1.25rem; }
+.eoj-methods { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.eoj-methodbtn { display: grid; gap: 4px; text-align: left; padding: 16px 18px; border: 1.5px solid #e2e8f0; border-radius: 14px; background: #fff; cursor: pointer; font: inherit; color: #0b1f4d; transition: border-color 0.2s, box-shadow 0.2s, background 0.2s; }
+.eoj-methodbtn strong { font-size: 1.02rem; }
+.eoj-methodbtn small { color: #64748b; font-size: 12.5px; line-height: 1.4; }
+.eoj-methodbtn:hover { border-color: #f97316; }
+.eoj-methodbtn[aria-pressed="true"] { border-color: #f97316; background: #fff7f0; box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15); }
+.eoj-panel { margin-top: 16px; padding: 22px; border: 1px solid #e2e8f0; border-radius: 14px; background: #fff; }
+.eoj-panel[hidden] { display: none; }
+.eoj-qrbox { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 24px; align-items: center; }
+.eoj-qr { position: relative; width: 210px; height: 210px; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 8px; display: grid; place-items: center; }
+.eoj-qr svg, .eoj-qr img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.eoj-qr.is-expired svg, .eoj-qr.is-expired img { opacity: 0.08; filter: blur(3px); }
+.eoj-qr.is-expired::after { content: "Expired"; position: absolute; font-weight: 800; color: #0b1f4d; letter-spacing: 0.08em; text-transform: uppercase; }
+.eoj-qr__wait { color: #64748b; font-size: 14px; }
+.eoj-qr-timer { font-weight: 800; color: #0b1f4d; margin: 0 0 8px; }
+.eoj-qr-bar { height: 6px; background: #e2e8f0; border-radius: 99px; overflow: hidden; margin-bottom: 14px; }
+.eoj-qr-bar span { display: block; height: 100%; width: 100%; background: #f97316; transition: width 1s linear; }
+.eoj-upiapps { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.eoj-upiapps[hidden], .eoj-qrinfo [hidden] { display: none; }
+@media (hover: hover) and (pointer: fine) { .eoj-upiapps { display: none !important; } }
+@media (max-width: 600px) { .eoj-qrbox { grid-template-columns: 1fr; justify-items: center; text-align: center; } }
+
+.eoj-paybox [hidden], .eoj-form[hidden] { display: none !important; }

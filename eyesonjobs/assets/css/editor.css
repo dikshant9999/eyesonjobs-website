@@ -1,0 +1,7 @@
+/* Block editor tweaks: show animated content immediately and keep layout readable. */
+.editor-styles-wrapper [data-reveal] { opacity: 1 !important; transform: none !important; }
+.editor-styles-wrapper .eoj-section { padding-block: 48px; outline: 1px dashed #cbd5e1; outline-offset: -1px; }
+.editor-styles-wrapper .eoj-section--promo, .editor-styles-wrapper .eoj-card--navy, .editor-styles-wrapper .eoj-cta { color: #fff; }
+.editor-styles-wrapper .eoj-testimonials { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(2, 1fr); overflow: visible; }
+.editor-styles-wrapper .eoj-marquee { animation: none; flex-wrap: wrap; width: auto; }
+.editor-styles-wrapper .wp-block-shortcode { font-size: 13px; }

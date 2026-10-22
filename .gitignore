@@ -1,0 +1,7 @@
+CLAUDE_CODE_PROMPT.md
+UDE_CODE_PROMPT.md
+eyesonjobs-theme/
+.dev/
+*.log
+.pg.log
+node_modules/

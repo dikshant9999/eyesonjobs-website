@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Eyes on Jobs: hero finish. Loaded after main.css. Adds the Eyes on Jobs
+   magnifier motif behind the hero and the inner page banners.
+   ========================================================================== */
+
+/* Header */
+.eoj-header { border-bottom: 1px solid rgba(11, 31, 77, 0.08); }
+.eoj-logo img { height: 62px; }
+.eoj-logo--badge { background: none; padding: 0; border-radius: 0; }
+.eoj-logo--badge img { height: 84px; }
+
+/* Hero: white with the magnifier motif */
+.eoj-hero {
+	background:
+		url("../img/hero-bg-light.svg") right 2% center / min(660px, 52vw) no-repeat,
+		radial-gradient(900px 520px at 80% 40%, rgba(249, 115, 22, 0.1), transparent 62%),
+		radial-gradient(800px 500px at 0% 100%, rgba(30, 58, 138, 0.07), transparent 60%),
+		#fff;
+	min-height: 640px;
+	display: flex;
+	align-items: center;
+}
+.eoj-hero > * { width: 100%; }
+.eoj-hero__art { display: none; }
+.eoj-hero__cols > .wp-block-column:first-child { flex-basis: 64% !important; }
+.eoj-hero__title { font-size: clamp(2.5rem, 5.2vw, 4.3rem); line-height: 1.12; }
+/* Gradient text is clipped to its box, so leave room for descenders (g, j, p). */
+.eoj-hero__title strong { padding-bottom: 0.14em; }
+.eoj-hero .eoj-jobsearch { max-width: 600px; }
+
+/* Inner page banners keep the navy band, with the motif in light strokes */
+.eoj-pagehero {
+	background:
+		url("../img/hero-bg.svg") right -120px center / 520px no-repeat,
+		var(--grad-navy);
+}
+.eoj-pagehero__shapes span:nth-child(3) { top: 22%; left: 7%; }
+
+@media (max-width: 1024px) {
+	.eoj-hero { min-height: 0; background-position: right -180px top 30px, center, center, center; background-size: 460px, auto, auto, auto; }
+}
+@media (max-width: 782px) {
+	.eoj-hero__cols > .wp-block-column:first-child { flex-basis: 100% !important; }
+}

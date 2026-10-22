@@ -1,0 +1,16 @@
+/*
+Theme Name: Eyes on Jobs
+Theme URI: https://eyesonjobs.com/
+Author: Eyes on Jobs
+Description: A fast, modern and animated recruitment theme for Eyes on Jobs. Works with the "Eyes on Jobs Core" plugin, which adds job listings, candidate and employer accounts, forms with reCAPTCHA v3, and Razorpay payments. No page builder needed: every page is edited in the normal WordPress block editor.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: eyesonjobs
+Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, block-styles, wide-blocks
+*/
+
+/* All styles live in assets/css/main.css so this file only carries the theme header. */
